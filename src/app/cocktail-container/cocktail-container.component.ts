@@ -16,13 +16,13 @@ export class CocktailContainerComponent  {
   },
   {
     name:"Blue Lagoon",
-    img:'https://maisonfoody.com/sites/default/files/styles/article_paragraph_image/public/2019-11/blue-lagoon_0.jpg?itok=xac6xT0P',
+    img:'assets/images/blueLagoon.png',
     description:'C’est sa couleur qui le rend si populaire, et ce bleu, le Blue Lagoon le doit au curaçao !',
     tags: ['Rafraîchissant', 'Facile', '3 min']
   },
   {
     name:"Aquavit Fresh",
-    img:'https://maisonfoody.com/sites/default/files/styles/article_paragraph_image/public/2019-11/aquavit-fresh.jpg?itok=C17K5mqQ',
+    img:'assets/images/aquavit-fresh.jpg',
     description:'Venu tout droit de Norvège l’Aquavit est l’alcool le plus trendy du moment.',
     tags: ['Épicé', 'Moyen', '7 min']
   }
