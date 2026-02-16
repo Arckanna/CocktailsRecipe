@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Cocktail } from '../interfaces/cocktail.interface';
 
 @Component({
-  selector: 'app-cocktail-list',
-  templateUrl: './cocktail-list.component.html',
-  styleUrls: ['./cocktail-list.component.scss']
+  selector: 'app-cocktail-container',
+  templateUrl: './cocktail-container.component.html',
+  styleUrls: ['./cocktail-container.component.scss']
 })
-export class CocktailListComponent implements OnInit {
-  cocktails : Cocktail[] = [
+export class CocktailContainerComponent  {
+  public cocktails: Cocktail[] = [
     {
     name:"Mojito",
     img:'https://maisonfoody.com/sites/default/files/styles/article_paragraph_image/public/2020-08/articles-images-corps-texte-8.png?itok=tDVVevZ-',
@@ -26,11 +26,16 @@ export class CocktailListComponent implements OnInit {
     description:'Venu tout droit de Norvège l’Aquavit est l’alcool le plus trendy du moment.'
 
   }
-]
+];
+public selectedCocktail: Cocktail = this.cocktails[0];
 
-  constructor() { }
+constructor() { }
+public selectCocktail(index: number):void{
+  console.log(index);
+  this.selectedCocktail = this.cocktails[index];
+}
 
-  ngOnInit(): void {
-  }
+
+  
 
 }
