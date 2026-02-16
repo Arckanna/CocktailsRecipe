@@ -1,0 +1,19 @@
+.details-card {
+  max-width: 560px;
+
+  img {
+    max-height: 320px;
+    object-fit: cover;
+  }
+
+  mat-card-title {
+    font-family: var(--font-titles);
+    font-size: 1.75rem;
+    color: var(--text-on-light);
+  }
+
+  p {
+    color: var(--text-on-light);
+    line-height: 1.6;
+  }
+}

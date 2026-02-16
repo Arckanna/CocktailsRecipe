@@ -31,7 +31,6 @@ public selectedCocktail: Cocktail = this.cocktails[0];
 
 constructor() { }
 public selectCocktail(index: number):void{
-  console.log(index);
   this.selectedCocktail = this.cocktails[index];
 }
 

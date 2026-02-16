@@ -1,0 +1,15 @@
+.sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+.cocktail-sidenav {
+  width: 320px;
+  min-width: 280px;
+  border-right: 1px solid rgba(237, 231, 221, 0.1);
+  background-color: var(--app-bg) !important;
+}
+
+.cocktail-content {
+  padding: 24px;
+  background-color: var(--app-bg);
+}

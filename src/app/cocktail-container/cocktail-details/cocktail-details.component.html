@@ -1,6 +1,15 @@
-<div class="d-flex flex-column">
-  <img [src]="cocktail.img" alt="cocktail.name" class="mb-20" />
-  <h3 class="mb-20">{{ cocktail.name }}</h3>
-  <p class="mb-20">{{ cocktail.description }}</p>
-  <div><button class="btn btn-primary">Editer le cocktail</button></div>
-</div>
+<mat-card class="details-card" *ngIf="cocktail">
+  <img mat-card-image [src]="cocktail.img" [alt]="cocktail.name" />
+  <mat-card-header>
+    <mat-card-title class="title-serif">{{ cocktail.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ cocktail.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary">
+      <mat-icon>edit</mat-icon>
+      Éditer le cocktail
+    </button>
+  </mat-card-actions>
+</mat-card>

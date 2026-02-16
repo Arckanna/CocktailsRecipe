@@ -16,7 +16,6 @@ export class CocktailListComponent implements OnInit {
   }
 
   public selectCocktail(index: number): void {
-    console.log("bouh"+index);
     this.changeCocktail.emit(index);
   }
 

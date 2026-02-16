@@ -1,166 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
-//reset
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
-
-ul{
-    list-style: none;
-}
-
-img{
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-//variables
+/* Variables du design system - Cocktails */
 :root {
-    --font-family:'Spectral', serif;
-    --primary:#fed766;
-    --secondary:#2ab7ca;
-    --accent:#fe4a49;
-    --lightgray:#ddd;
-    --text-regular:#444;
-    --text-light:#ecf0f1;
+  --app-bg: #121417;
+  --card-bg: #FFFFFF;
+  --text-on-dark: #EDE7DD;
+  --text-on-light: #1E1E1E;
+  --accent-gold: #D6B25E;
+  --accent-green: #2E7D6B;
+  --font-titles: 'Spectral', serif;
+  --font-body: 'Roboto', 'Helvetica Neue', sans-serif;
 }
 
-//base
-body{
-    font-family: var(--font-family);
-    color: var(--text-regular);
-    background-color: var(--lightgray);
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-//layout
-.container{
-    max-width: 1200px;
-    display: block;
-    margin: auto;
-    
-}
-.d-flex{
-    display: flex;
+ul {
+  list-style: none;
 }
 
-.flex-row{
-    flex-direction: row;
+img {
+  max-width: 100%;
+  border-radius: 5px;
 }
 
-.flex-column{
-    flex-direction: column;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.flex-justify-content-center{
-    justify-content: center;
+/* Base - Fond chaud sombre */
+body {
+  font-family: var(--font-body);
+  color: var(--text-on-light);
+  background-color: var(--app-bg);
+  min-height: 100vh;
 }
 
-.flex-justify-content-between{
-    justify-content: space-between;
+/* Layout */
+.container {
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-.flex-align-items-center{
-    align-items: center;
+.d-flex {
+  display: flex;
 }
 
-.flex-align-items-between{
-    align-items: space-between;
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.flex-justify-content-between { justify-content: space-between; }
+.flex-align-items-center { align-items: center; }
+.flex-50 { flex: 1 1 50%; }
+.flex-fill { flex: 1 1 auto; }
+
+/* Util */
+.p-10 { padding: 10px; }
+.p-20 { padding: 20px; }
+.mb-20 { margin-bottom: 20px; }
+.pr-16 { padding-right: 16px; }
+.pl-16 { padding-left: 16px; }
+.gap-24 { gap: 24px; }
+
+/* Titres serif */
+h1, h2, h3, .title-serif {
+  font-family: var(--font-titles);
+  color: var(--text-on-light);
 }
 
-.flex-fill{
-    flex: 1 1 auto;
-}
-.flex-50{
-    flex:1 1 50%;
-}
-
-//util
-.p-10{
-    padding: 10px;
-}
-
-.p-20{
-    padding: 20px;
-}
-
-.m-10{
-    margin: 10px;
-}
-.m-20{
-    margin: 20px;
-}
-
-.mb-20{
-    margin-bottom: 20px;
-}
-.pr-10{
-    padding-right: 10px;
-}
-.pl-10{
-    padding-left: 10px;
-}
-.mr-10{
-    margin-right: 10px;
-}
-.ml-10{
-    margin-left: 10px;
-}
-//theme
-
-.list-primary{
-    li{
-        padding:10px 15px;
-        border: 1px solid var(--lightgray);
-        border-top: 0;
-        &:hover {
-            background-color: var(--primary);
-            color: var(--text-regular);
-            font-weight: 500;
-
-
-        }
-        transition: all 0.4s;
-        cursor: pointer;
-    }
-    li:first-child{
-        border-top: 1px solid var(--lightgray);
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-    li:last-child{
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
-}
-.btn{
-    padding: 10px 15px;
-    color: var(--text-regular);
-    border:0;
-    border-radius: 5px;
-    font-weight: 700;
-    cursor: pointer;
-    &-primary{
-        background-color: var(--primary);
-        color: var(--text-regular);
-        &:hover{
-            background-color: var(--secondary);
-        }
-        transition: background-color 0.4s;
-    }
-}
-//debug
-
-.d1 {
-    border:1px solid red;
-}
-
-.d2{
-    border: 1px solid green;
+/* Override Material cards pour fond blanc */
+.mat-mdc-card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-on-light) !important;
 }

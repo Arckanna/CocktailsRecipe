@@ -1,0 +1,24 @@
+.list-card {
+  margin: 16px;
+}
+
+mat-card-title {
+  font-family: var(--font-titles);
+  font-size: 1.25rem;
+  color: var(--text-on-light);
+}
+
+.cocktail-list-item {
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 4px;
+
+  &:hover {
+    background-color: rgba(214, 178, 94, 0.15) !important;
+  }
+}
+
+.add-btn {
+  margin-top: 16px;
+  width: 100%;
+}

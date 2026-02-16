@@ -1,11 +1,11 @@
-<div class="container d-flex flex-row">
-  <app-cocktail-list
-    (changeCocktail)="selectCocktail($event)"
-    [cocktails]="cocktails"
-    class="flex-50 pr-10"
-  ></app-cocktail-list>
-  <app-cocktail-details
-    [cocktail]="selectedCocktail"
-    class="flex-50 pl-10"
-  ></app-cocktail-details>
-</div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened class="cocktail-sidenav">
+    <app-cocktail-list
+      (changeCocktail)="selectCocktail($event)"
+      [cocktails]="cocktails"
+    ></app-cocktail-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="cocktail-content">
+    <app-cocktail-details [cocktail]="selectedCocktail"></app-cocktail-details>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,10 +1,20 @@
-<h3 class="mb-20">Liste des cocktails</h3>
-<ul class="mb-20 list-primary">
-  <li
-    (click)="selectCocktail(index)"
-    *ngFor="let cocktail of cocktails; let index = index"
-  >
-    {{ cocktail.name }}
-  </li>
-</ul>
-<button class="btn btn-primary">Ajouter un cocktails</button>
+<mat-card class="list-card">
+  <mat-card-header>
+    <mat-card-title class="title-serif">Liste des cocktails</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-nav-list>
+      <mat-list-item
+        *ngFor="let cocktail of (cocktails ?? []); let index = index"
+        (click)="selectCocktail(index)"
+        class="cocktail-list-item"
+      >
+        {{ cocktail.name }}
+      </mat-list-item>
+    </mat-nav-list>
+    <button mat-flat-button color="primary" class="add-btn">
+      <mat-icon>add</mat-icon>
+      Ajouter un cocktail
+    </button>
+  </mat-card-content>
+</mat-card>
