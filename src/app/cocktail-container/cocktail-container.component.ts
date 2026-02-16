@@ -10,7 +10,7 @@ export class CocktailContainerComponent  {
   public cocktails: Cocktail[] = [
     {
     name: 'Mojito',
-    img:'https://maisonfoody.com/sites/default/files/styles/article_paragraph_image/public/2020-08/articles-images-corps-texte-8.png?itok=tDVVevZ-',
+    img: 'assets/images/mojito.png',
     description:'Il est sans conteste le cocktail préféré des français et probablement l’un des plus faciles à réaliser.',
     tags: ['Fruité', 'Facile', '5 min']
   },
