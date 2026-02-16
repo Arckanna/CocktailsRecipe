@@ -17,6 +17,7 @@
         *ngFor="let cocktail of filteredCocktails"
         [value]="cocktail"
         [selected]="cocktail === selectedCocktail"
+        [class.cocktail-option-active]="cocktail === selectedCocktail"
       >
         {{ cocktail.name }}
       </mat-list-option>

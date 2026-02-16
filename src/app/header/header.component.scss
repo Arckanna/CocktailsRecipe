@@ -1,7 +1,7 @@
 .app-toolbar {
   background-color: var(--app-bg) !important;
   color: var(--text-on-dark) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   padding: 0 24px;
 }
 
@@ -22,7 +22,7 @@
 
   .nav-link {
     padding: 8px 16px;
-    border-radius: 4px;
+    border-radius: var(--radius-lg, 16px);
     transition: background-color 0.2s, color 0.2s;
 
     &:hover {

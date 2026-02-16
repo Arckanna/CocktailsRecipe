@@ -4,12 +4,39 @@
 
 .search-field {
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .cocktail-selection-list {
   max-height: 300px;
   overflow-y: auto;
+
+  mat-list-option {
+    border-radius: 8px;
+    margin-bottom: 4px;
+
+    &:hover {
+      background-color: rgba(214, 178, 94, 0.08) !important;
+    }
+
+    &.cocktail-option-active {
+      background-color: rgba(214, 178, 94, 0.15) !important;
+      position: relative;
+      padding-left: 20px !important;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 24px;
+        background-color: var(--accent-gold);
+        border-radius: 0 2px 2px 0;
+      }
+    }
+  }
 }
 
 mat-card-title {
@@ -18,17 +45,7 @@ mat-card-title {
   color: var(--text-on-light);
 }
 
-.cocktail-list-item {
-  cursor: pointer;
-  border-radius: 4px;
-  margin-bottom: 4px;
-
-  &:hover {
-    background-color: rgba(214, 178, 94, 0.15) !important;
-  }
-}
-
 .add-btn {
-  margin-top: 16px;
+  margin-top: 24px;
   width: 100%;
 }
