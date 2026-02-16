@@ -1,15 +1,22 @@
 <mat-card class="details-card" *ngIf="cocktail">
-  <img mat-card-image [src]="cocktail.img" [alt]="cocktail.name" />
+  <img
+    mat-card-image
+    [src]="cocktail.img"
+    [alt]="cocktail.name"
+  />
   <mat-card-header>
     <mat-card-title class="title-serif">{{ cocktail.name }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
+    <mat-chip-set *ngIf="cocktail.tags?.length" class="cocktail-tags">
+      <mat-chip *ngFor="let tag of cocktail.tags">{{ tag }}</mat-chip>
+    </mat-chip-set>
     <p>{{ cocktail.description }}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-flat-button color="primary">
+    <button mat-stroked-button color="primary">
       <mat-icon>edit</mat-icon>
-      Éditer le cocktail
+      Modifier
     </button>
   </mat-card-actions>
 </mat-card>

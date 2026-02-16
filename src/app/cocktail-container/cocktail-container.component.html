@@ -3,6 +3,7 @@
     <app-cocktail-list
       (changeCocktail)="selectCocktail($event)"
       [cocktails]="cocktails"
+      [selectedCocktail]="selectedCocktail"
     ></app-cocktail-list>
   </mat-sidenav>
   <mat-sidenav-content class="cocktail-content">

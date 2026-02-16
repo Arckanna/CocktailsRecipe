@@ -1,22 +1,29 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Cocktail } from '../../interfaces/cocktail.interface';
-
 
 @Component({
   selector: 'app-cocktail-list',
   templateUrl: './cocktail-list.component.html',
   styleUrls: ['./cocktail-list.component.scss']
 })
-export class CocktailListComponent implements OnInit {
-  @Output() private changeCocktail: EventEmitter<number> = new EventEmitter();
-  @Input() public cocktails?: Cocktail[];
-  constructor() { }
+export class CocktailListComponent {
+  @Output() changeCocktail = new EventEmitter<Cocktail>();
+  @Input() cocktails?: Cocktail[];
+  @Input() selectedCocktail?: Cocktail;
 
-  ngOnInit(): void {
+  searchTerm = '';
+
+  get filteredCocktails(): Cocktail[] {
+    const list = this.cocktails ?? [];
+    if (!this.searchTerm.trim()) return list;
+    const term = this.searchTerm.toLowerCase();
+    return list.filter(c => c.name.toLowerCase().includes(term));
   }
 
-  public selectCocktail(index: number): void {
-    this.changeCocktail.emit(index);
+  onSelectionChange(event: { options: Array<{ value: Cocktail; selected: boolean }> }): void {
+    const selected = event.options.find(opt => opt.selected);
+    if (selected) {
+      this.changeCocktail.emit(selected.value);
+    }
   }
-
 }

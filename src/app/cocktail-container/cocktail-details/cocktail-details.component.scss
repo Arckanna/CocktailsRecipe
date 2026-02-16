@@ -1,6 +1,10 @@
 .details-card {
   max-width: 560px;
 
+  .cocktail-tags {
+    margin-bottom: 16px;
+  }
+
   img {
     max-height: 320px;
     object-fit: cover;

@@ -2,6 +2,16 @@
   margin: 16px;
 }
 
+.search-field {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.cocktail-selection-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
 mat-card-title {
   font-family: var(--font-titles);
   font-size: 1.25rem;
