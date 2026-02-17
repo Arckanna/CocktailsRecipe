@@ -51,8 +51,8 @@ $bottle-green-palette: (
   )
 );
 
-$cocktail-primary: mat.define-palette($gold-palette, 500);
-$cocktail-accent: mat.define-palette($bottle-green-palette, 500);
+$cocktail-primary: mat.define-palette($bottle-green-palette, 500);
+$cocktail-accent: mat.define-palette($bottle-green-palette, 300);
 
 $cocktail-theme: mat.define-light-theme((
   color: (

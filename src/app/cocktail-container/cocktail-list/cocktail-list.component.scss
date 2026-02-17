@@ -8,44 +8,29 @@
 
   ::ng-deep {
     .mat-mdc-form-field-flex {
-      background-color: rgba(255, 255, 255, 0.04) !important;
+      background-color: #fff !important;
     }
-    .mat-mdc-text-field-wrapper input,
-    .mat-mdc-form-field .mat-mdc-floating-label,
-    .mat-mdc-input-element::placeholder {
-      color: var(--text-ivory) !important;
-    }
-    .mdc-notched-outline .mdc-notched-outline__leading,
-    .mdc-notched-outline .mdc-notched-outline__notch,
-    .mdc-notched-outline .mdc-notched-outline__trailing {
-      border-color: rgba(214, 178, 94, 0.2) !important;
+    .mdc-notched-outline * {
+      border-color: var(--border) !important;
     }
     .mat-mdc-form-field:hover .mdc-notched-outline * {
-      border-color: rgba(214, 178, 94, 0.4) !important;
+      border-color: rgba(46, 107, 95, 0.35) !important;
     }
   }
 }
 
-.cocktail-selection-list {
-  max-height: 300px;
-  overflow-y: auto;
+.cocktail-selection-list mat-list-option {
+  border-radius: 12px;
+  margin-bottom: 6px;
 
-  mat-list-option {
-    border-radius: 8px;
-    margin-bottom: 4px;
-    transition: all 0.25s ease;
+  &:hover {
+    background-color: rgba(46, 107, 95, 0.06) !important;
+  }
 
-    &:hover {
-      background-color: rgba(214, 178, 94, 0.06) !important;
-      transform: translateX(4px);
-    }
-
-    &.cocktail-option-active {
-      background: rgba(214, 178, 94, 0.08) !important;
-      border-left: 3px solid var(--accent-gold);
-      padding-left: 16px !important;
-      margin-left: 0;
-    }
+  &.cocktail-option-active {
+    background: rgba(46, 107, 95, 0.08) !important;
+    border-left: 3px solid var(--accent);
+    padding-left: 16px !important;
   }
 }
 

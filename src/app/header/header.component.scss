@@ -1,12 +1,12 @@
 .app-toolbar {
-  background: rgba(18, 20, 23, 0.85) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  color: var(--text-on-dark) !important;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  color: var(--text-main) !important;
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
   padding: 0 24px;
 }
-
 .logo-section {
   display: flex;
   flex-direction: column;
@@ -30,29 +30,14 @@
 }
 
 .logo-separator {
-  width: 32px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent-gold), transparent);
-  border-radius: 1px;
-  margin-top: 4px;
+  background: linear-gradient(90deg, var(--accent), transparent);
 }
 
 .spacer {
   flex: 1 1 auto;
 }
 
-.toolbar-nav {
-  display: flex;
-  gap: 8px;
-
-  .nav-link {
-    padding: 8px 16px;
-    border-radius: var(--radius-lg, 18px);
-    transition: background-color 0.2s, color 0.2s;
-
-    &:hover {
-      background-color: rgba(214, 178, 94, 0.2);
-      color: var(--accent-gold);
-    }
-  }
+.toolbar-nav .nav-link:hover {
+  background-color: rgba(46, 107, 95, 0.08);
+  color: var(--accent);
 }
