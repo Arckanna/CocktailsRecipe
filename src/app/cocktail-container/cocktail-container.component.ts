@@ -22,7 +22,7 @@ export class CocktailContainerComponent  {
   },
   {
     name:"Aquavit Fresh",
-    img:'assets/images/aquavit-fresh.jpg',
+    img:'assets/images/AquavitFresh.png',
     description:'Venu tout droit de Norvège l’Aquavit est l’alcool le plus trendy du moment.',
     tags: ['Épicé', 'Moyen', '7 min']
   }
