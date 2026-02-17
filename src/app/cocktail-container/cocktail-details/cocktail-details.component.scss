@@ -1,23 +1,69 @@
 .details-card {
   max-width: 560px;
+  overflow: hidden;
+  padding: 0 !important;
+
+  .mat-mdc-card-content {
+    padding: var(--spacing-card) !important;
+  }
+
+  .mat-mdc-card-actions {
+    padding: 0 var(--spacing-card) var(--spacing-card) !important;
+  }
+
+  .cocktail-hero {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70%;
+      background: linear-gradient(
+        to top,
+        rgba(23, 26, 33, 0.98),
+        rgba(23, 26, 33, 0.6),
+        transparent
+      );
+      pointer-events: none;
+    }
+
+    .hero-title {
+      position: absolute;
+      bottom: 28px;
+      left: var(--spacing-card);
+      right: var(--spacing-card);
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--text-ivory);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    }
+  }
 
   .cocktail-tags {
     margin-bottom: 16px;
   }
 
-  img {
-    max-height: 320px;
-    object-fit: cover;
-  }
-
   mat-card-title {
     font-family: var(--font-titles);
     font-size: 1.75rem;
-    color: var(--text-on-light);
+    color: var(--text-ivory);
   }
 
   p {
-    color: var(--text-on-light);
+    color: var(--text-ivory);
     line-height: 1.6;
+    opacity: 0.9;
   }
 }

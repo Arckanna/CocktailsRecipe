@@ -1,8 +1,16 @@
 .app-toolbar {
-  background-color: var(--app-bg) !important;
+  background: rgba(18, 20, 23, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: var(--text-on-dark) !important;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
   padding: 0 24px;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .logo {
@@ -10,6 +18,23 @@
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.logo-separator {
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-gold), transparent);
+  border-radius: 1px;
+  margin-top: 4px;
 }
 
 .spacer {
@@ -22,7 +47,7 @@
 
   .nav-link {
     padding: 8px 16px;
-    border-radius: var(--radius-lg, 16px);
+    border-radius: var(--radius-lg, 18px);
     transition: background-color 0.2s, color 0.2s;
 
     &:hover {
