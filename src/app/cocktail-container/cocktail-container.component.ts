@@ -20,6 +20,12 @@ export class CocktailContainerComponent  {
       { name: 'Sucre de canne', quantity: '2 cuillères à café' },
       { name: 'Eau gazeuse', quantity: '10 cl' },
       { name: 'Glaçons' }
+    ],
+    recipe: [
+      'Piler le sucre et les feuilles de menthe dans le verre avec le citron coupé en quartiers.',
+      'Ajouter les glaçons et verser le rhum.',
+      'Mélanger le tout avec un pilon.',
+      'Compléter avec l\'eau gazeuse et décorer d\'une branche de menthe et d\'une rondelle de citron.'
     ]
   },
   {
@@ -33,6 +39,13 @@ export class CocktailContainerComponent  {
       { name: 'Citron', quantity: '1/2' },
       { name: 'Sprite ou eau gazeuse', quantity: '10 cl' },
       { name: 'Glaçons' }
+    ],
+    recipe: [
+      'Remplir un verre à whisky de glaçons.',
+      'Verser la vodka et le curaçao bleu.',
+      'Presser le citron et ajouter le jus.',
+      'Compléter avec le Sprite ou l\'eau gazeuse.',
+      'Mélanger délicatement et décorer d\'une tranche de citron ou d\'une cerise.'
     ]
   },
   {
@@ -47,6 +60,13 @@ export class CocktailContainerComponent  {
       { name: 'Menthe fraîche', quantity: 'quelques feuilles' },
       { name: 'Sirop de sucre', quantity: '1 cl' },
       { name: 'Glaçons' }
+    ],
+    recipe: [
+      'Mettre les tranches de concombre et la menthe dans un shaker, ajouter le citron pressé et le sirop.',
+      'Piler légèrement pour libérer les arômes.',
+      'Ajouter l\'aquavit et une poignée de glaçons.',
+      'Shaker vigoureusement pendant 15 secondes.',
+      'Servir dans un verre rempli de glaçons et décorer d\'une tranche de concombre et de menthe.'
     ]
   }
 ];

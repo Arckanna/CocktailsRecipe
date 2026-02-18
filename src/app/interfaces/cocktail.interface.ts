@@ -9,4 +9,5 @@ export interface Cocktail {
   description: string;
   tags?: string[];
   ingredients?: CocktailIngredient[];
+  recipe?: string[];
 }

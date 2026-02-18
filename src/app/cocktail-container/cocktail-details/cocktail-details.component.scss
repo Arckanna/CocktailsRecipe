@@ -110,6 +110,24 @@
       color: var(--text-muted);
       font-style: italic;
     }
+
+    .recipe-steps {
+      padding: 8px 0 8px 24px;
+      margin: 0;
+      color: var(--text-muted, #666);
+      line-height: 1.8;
+
+      li {
+        padding: 8px 0;
+        padding-left: 8px;
+      }
+    }
+
+    .no-recipe {
+      padding: 16px 0;
+      color: var(--text-muted);
+      font-style: italic;
+    }
   }
 
   mat-card-title {

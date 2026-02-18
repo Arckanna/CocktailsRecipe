@@ -29,6 +29,16 @@
         </ul>
         <p class="no-ingredients" *ngIf="!cocktail.ingredients?.length">Aucun ingrédient renseigné pour ce cocktail.</p>
       </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="tab-icon">menu_book</mat-icon>
+          Recette
+        </ng-template>
+        <ol class="recipe-steps" *ngIf="cocktail.recipe?.length">
+          <li *ngFor="let step of cocktail.recipe">{{ step }}</li>
+        </ol>
+        <p class="no-recipe" *ngIf="!cocktail.recipe?.length">Aucune recette renseignée pour ce cocktail.</p>
+      </mat-tab>
     </mat-tab-group>
   </mat-card-content>
   <mat-card-actions>
