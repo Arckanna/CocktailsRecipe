@@ -48,6 +48,70 @@
     margin-bottom: 16px;
   }
 
+  .cocktail-tabs {
+    margin-top: 16px;
+
+    .tab-icon {
+      margin-right: 8px;
+      vertical-align: middle;
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .tab-content {
+      padding: 8px 0;
+      margin: 0;
+    }
+
+    .ingredients-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 0 8px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        color: var(--text-muted, #666);
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: var(--primary, #1976d2);
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .ingredient-name {
+        flex: 1;
+      }
+
+      .ingredient-quantity {
+        font-weight: 500;
+        color: var(--text-main, #333);
+      }
+    }
+
+    .no-ingredients {
+      padding: 16px 0;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+  }
+
   mat-card-title {
     font-family: var(--font-titles);
     font-size: 1.75rem;

@@ -8,7 +8,28 @@
     <mat-chip-set *ngIf="cocktail.tags?.length" class="cocktail-tags">
       <mat-chip *ngFor="let tag of cocktail.tags">{{ tag }}</mat-chip>
     </mat-chip-set>
-    <p>{{ cocktail.description }}</p>
+    <mat-tab-group animationDuration="200ms" class="cocktail-tabs">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="tab-icon">description</mat-icon>
+          Description
+        </ng-template>
+        <p class="tab-content">{{ cocktail.description }}</p>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon class="tab-icon">restaurant</mat-icon>
+          Ingrédients
+        </ng-template>
+        <ul class="ingredients-list" *ngIf="cocktail.ingredients?.length">
+          <li *ngFor="let ingredient of cocktail.ingredients">
+            <span class="ingredient-name">{{ ingredient.name }}</span>
+            <span class="ingredient-quantity" *ngIf="ingredient.quantity">{{ ingredient.quantity }}</span>
+          </li>
+        </ul>
+        <p class="no-ingredients" *ngIf="!cocktail.ingredients?.length">Aucun ingrédient renseigné pour ce cocktail.</p>
+      </mat-tab>
+    </mat-tab-group>
   </mat-card-content>
   <mat-card-actions>
     <button mat-stroked-button color="primary">
