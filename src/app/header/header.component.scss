@@ -5,12 +5,16 @@
   color: var(--text-main) !important;
   border-bottom: 1px solid var(--border);
   box-shadow: none;
-  padding: 0 24px;
+  padding: 20px 24px !important;
+  min-height: 80px !important;
+  align-items: center;
 }
+
 .logo-section {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
+  justify-content: center;
 }
 
 .logo {
@@ -18,7 +22,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .logo-subtitle {
@@ -30,11 +34,27 @@
 }
 
 .logo-separator {
+  width: 32px;
+  height: 2px;
   background: linear-gradient(90deg, var(--accent), transparent);
+  border-radius: 1px;
+  margin-top: 2px;
 }
 
 .spacer {
   flex: 1 1 auto;
+}
+
+.toolbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.toolbar-nav .nav-link {
+  padding: 10px 20px;
+  border-radius: var(--radius-lg);
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .toolbar-nav .nav-link:hover {

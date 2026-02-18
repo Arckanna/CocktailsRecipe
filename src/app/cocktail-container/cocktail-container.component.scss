@@ -1,5 +1,5 @@
 .sidenav-container {
-  height: calc(100vh - 64px);
+  height: calc(100vh - 80px);
 }
 
 .cocktail-sidenav {
@@ -10,6 +10,9 @@
 }
 
 .cocktail-content {
-  padding: 32px;
+  padding: 48px 32px;
   background-color: var(--app-bg);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }

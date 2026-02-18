@@ -1,5 +1,11 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+}
+
 .details-card {
-  max-width: 560px;
+  width: 100%;
   overflow: hidden;
   padding: 0 !important;
 
@@ -45,7 +51,7 @@
   mat-card-title {
     font-family: var(--font-titles);
     font-size: 1.75rem;
-    color: var(--text-ivory);
+    color: var(--text-main);
   }
   
   p {
