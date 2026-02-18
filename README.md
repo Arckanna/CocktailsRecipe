@@ -8,9 +8,12 @@ Application Angular de recettes de cocktails avec une interface premium et moder
 ## Fonctionnalités
 
 - Liste des cocktails avec recherche
-- Fiche détaillée par cocktail (image, description, tags)
+- Fiche détaillée par cocktail avec 3 onglets :
+  - **Description** : image, texte de présentation, tags
+  - **Ingrédients** : liste des ingrédients avec quantités
+  - **Recette** : étapes de préparation numérotées
 - Design système : fond sombre, cartes blanches, accents dorés
-- Composants Material : toolbar, sidenav, cards, chips, boutons
+- Composants Material : toolbar, sidenav, cards, chips, tabs, boutons
 
 ## Technologies
 
@@ -59,7 +62,7 @@ src/
 │   │   ├── cocktail-list/       # Liste avec recherche
 │   │   └── cocktail-details/     # Fiche cocktail
 │   ├── header/                  # Toolbar
-│   └── interfaces/              # Cocktail interface
+│   └── interfaces/              # Cocktail & CocktailIngredient interfaces
 ├── assets/
 │   └── images/                 # Images des cocktails
 ├── theme.scss                  # Thème Material personnalisé
@@ -86,19 +89,30 @@ src/
 - Ombres légères
 - Espacement : 24–32px
 
-## Ajouter une image de cocktail
+## Ajouter un cocktail
 
 1. Placer l'image dans `src/assets/images/`
-2. Mettre à jour l'URL dans `cocktail-container.component.ts` :
+2. Ajouter le cocktail dans `cocktail-container.component.ts` :
 
 ```typescript
 {
   name: 'Mon Cocktail',
   img: 'assets/images/mon-cocktail.png',
-  description: '...',
-  tags: ['...']
+  description: 'Présentation du cocktail...',
+  tags: ['Fruité', 'Facile', '5 min'],
+  ingredients: [
+    { name: 'Ingrédient 1', quantity: '5 cl' },
+    { name: 'Ingrédient 2', quantity: '2 cuillères à café' }
+  ],
+  recipe: [
+    'Étape 1 de la préparation.',
+    'Étape 2 de la préparation.',
+    'Étape 3 : servir et décorer.'
+  ]
 }
 ```
+
+Les champs `ingredients` et `recipe` sont optionnels.
 
 ## Commandes utiles
 
@@ -110,10 +124,8 @@ src/
 
 ## À venir
 
-- [ ] Ajouter un cocktail
-- [ ] Modifier un cocktail
-- [ ] Route Ingredients
-- [ ] Route Recettes
+- [ ] Formulaire pour ajouter un cocktail
+- [ ] Modifier un cocktail (bouton existant)
 
 ---
 
